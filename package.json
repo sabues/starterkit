@@ -3,10 +3,18 @@
   "version": "1.0.0",
   "description": "JavaScript development environment Pluralsight course by Cory House",
   "scripts": {
+    "prestart": "node buildScripts/startMessage.js",
+    "start": "npm-run-all --parallel security-check open:src",
+    "open:src": "node buildScripts/srcServer.js",
+    "security-check": "nsp check",
+    "localtunnel": "lt --port 3000 --subdomain sabues",
+    "share": "npm-run-all --parallel open:src localtunnel"
   },
   "author": "Cory House",
   "license": "MIT",
   "dependencies": {
+    "localtunnel": "^1.8.1",
+    "npm-run-all": "^3.1.1",
     "whatwg-fetch": "1.0.0"
   },
   "devDependencies": {
@@ -34,7 +42,7 @@
     "mocha": "3.1.2",
     "nock": "8.1.0",
     "npm-run-all": "3.1.1",
-    "nsp": "2.6.2",
+    "nsp": "2.6.3",
     "numeral": "1.5.3",
     "open": "0.0.5",
     "rimraf": "2.5.4",
