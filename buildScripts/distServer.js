@@ -15,6 +15,9 @@ app.get('/', function(req, res){
     res.sendFile(path.join(__dirname, '../dist/index.html'));
 });
 
+/*
+Removing this afte deploying /users to heroku
+
 app.get('/users', function(req, res){
     // Hard coding for simplicity. pretend this is real database
     res.json([
@@ -23,6 +26,7 @@ app.get('/users', function(req, res){
         {"id": 3,"firstName":"Tina","lastName":"Lee","email":"lee.tina@hotmail.com"}
     ]);
 });
+*/ 
 
 app.listen(port, function(err){
     if(err){

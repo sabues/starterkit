@@ -1,5 +1,5 @@
 export default function getBaseUrl(){
-    return getQueryStringParameterByName('useMockApi') ? 'http://localhost:3001/' : '/';
+    return getQueryStringParameterByName('useMockApi') ? 'http://localhost:3001/' : 'https://arcane-beach-85364.herokuapp.com/';
 }
 
 // This function allows to switch between the production api and the mock api by adding a querystring /?useMockApi=true
